@@ -1,0 +1,135 @@
+body {
+    display: grid;
+    font-family: "Overpass", serif;
+    background-color: hsl(216, 12%, 8%);
+    height: 100dvh;
+    place-items: center;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    padding: 30px;
+    height: 400px;
+    width: 400px;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 25px;
+}
+
+.icon {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background-color: hsl(213, 6%, 30%);
+    border-radius: 50%; /* Use 50% for a perfect circle */
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height (same as width) */
+    display: flex; /* Use flexbox to center the image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 5; /* Remove padding to avoid distortion */
+}
+
+.icon img {
+    
+    justify-self: start;
+    width: 20px;
+    height: 20px;
+}
+.container h1 {
+    justify-self: start;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.container p {
+    justify-self: start;
+    color: hsl(217, 12%, 63%);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.rating {
+    justify-self: center; /* Center the entire rating container */
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* Use auto for column width */
+    justify-content: space-between; /* Space between the buttons */
+    gap: 20px; /* Space between each button */
+    width: 100%; /* Ensure the container takes full width */
+}
+.container .rating button {
+    background-color: hsl(213, 6%, 30%);
+    width: 50px;
+    height:50px;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+
+}
+
+.container .rating button.selected {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+}
+
+.container .rating button:hover {
+    background-color: white;
+    color: hsl(216, 12%, 8%);
+
+}
+
+.container .rating button::after {
+    background-color: hsl(25, 97%, 53%);
+}
+
+.submit {
+    font-weight: 500;
+    width: 100%;
+    background-color: hsl(25, 97%, 53%);
+    padding: 15px;
+    border: none;
+    color: hsl(216, 12%, 8%);
+    border-radius: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.submit:hover {
+    background-color: white;
+    color: hsl(216, 12%, 8%);;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.thanksForm {
+    display: grid;
+    place-items: center;
+}
+.thanksForm h1{
+    justify-self: center;
+}
+
+.thanksForm p{
+    text-align: center;
+    color: white;
+}
+
+.thanksForm .ratingSelect {
+    margin: 25px;
+    background-color: hsl(216, 7%, 29%);
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+    color: hsl(25, 97%, 53%);
+    font-size: 15px;
+    font-weight: 400;
+}
